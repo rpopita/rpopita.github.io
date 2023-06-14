@@ -1,0 +1,80 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.page {
+  background-color: white;
+  margin: 0 0 10px 0;
+  padding: 24px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+#side-menu {
+  flex: 1;
+  padding: 10px 5px 5px 10px;
+}
+
+#side-menu > section {
+  border-radius: 2px;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#main {
+  padding: 10px 10px 5px 5px;
+  flex: 3;
+}
+
+h2 {
+  color: #0777ff;
+}
+a {
+  color: #0666ff;
+}
+#job-title {
+  font-style: italic;
+  font-weight: lighter;
+}
+.favourite {
+  font-weight: bold;
+}
+
+#top-menu-bar {
+  text-align: center;
+  background: #0777ff;
+  color: #fff;
+}
+#top-menu-bar li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+#top-menu-bar a {
+  text-decoration: none;
+  padding: 5px 15px 5px 15px;
+  color: #fff;
+  display: inline-block;
+  transition: 0.5;
+}
+#top-menu-bar a:visited {
+  color: #fff;
+}
+#top-menu-bar a:hover {
+  color: #0777ff;
+  background-color: #f00;
+}
