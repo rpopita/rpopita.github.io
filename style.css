@@ -44,26 +44,32 @@ body {
 h2 {
   color: #0777ff;
 }
+
 a {
   color: #0666ff;
 }
+
 #job-title {
   font-weight: lighter;
 }
+
 .favourite {
   font-weight: bold;
 }
+
 
 #top-menu-bar {
   text-align: center;
   background: #0777ff;
   color: #fff;
 }
+
 #top-menu-bar li {
   display: inline;
   margin: 0;
   padding: 0;
 }
+
 #top-menu-bar a {
   text-decoration: none;
   padding: 5px 15px 5px 15px;
@@ -71,9 +77,11 @@ a {
   display: inline-block;
   transition: 0.5;
 }
+
 #top-menu-bar a:visited {
   color: #fff;
 }
+
 #top-menu-bar a:hover {
   color: #0777ff;
   background-color: #f00;

@@ -13,86 +13,95 @@
       <img src="popi.jpeg" alt="" height="250" />
       <h2 id="job title">QA Engineer</h2>
       <ul id="top-menu-bar">
-        <li><a href="#">Home</a></li>
+        <li><a href="#" onclick="showHome()">Home</a></li>
         <li><a href="#" onclick="showSkills()">Skills</a></li>
-        <li><a href="#">Known Languages</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" onclick="showLanguages()">Known Languages</a></li>
+        <li><a href="#" onclick="showProjects()">Projects</a></li>
       </ul>
     </header>
+
     <section id="content">
       <div id="side-menu">
-        <h2>Contact</h2>
-        <form action="" method="get">
-          <label for="email">Enter your email</label>
-          <input
-            type="email"
-            name="contactEmail"
-            id="email"
-            placeholder="name@email.com"
-            required
-          />
-          <p>
-          <label for="name">Your name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Enter your name"
-            required
-          />
+        <section>
+          <h2>Contact</h2>
+          <form action="" method="get">
+            <label for="email">Enter your email</label>
+            <input
+              type="email"
+              name="contactEmail"
+              id="email"
+              placeholder="name@email.com"
+              required
+            />
+            <p>
+              <label for="name">Your name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+            </p>
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <div id="main">
+        <div id="home" class="page">
+          <p style="text-align: middle; font-weight: bold; color: black">
+            Welcome Robert!
           </p>
-          <div>
-            <button type="submit">Submit</button>
-          </div>
-          <section>
-            <div id="home" class="page">
-              <p style="text-align: middle; font-weight: bold; color: black">
-                Welcome Robert!
-              </p>
-            </div>
+        </div>
 
-            <div id = "skills" class="page">
-              <h2>Skills</h2>
-              <ul>
-                <li class="favourite">HTML</li>
-                <li>CSS</li>
-                <li class="favourite">JS</li>
-              </ul>
-            </div>
+        <div id="skills" class="page">
+          <h2>Skills</h2>
+          <ul>
+            <li class="favourite">HTML</li>
+            <li>CSS</li>
+            <li class="favourite">JS</li>
+          </ul>
+        </div>
 
-            <div id = "languages" class="page">
-              <h2>Known Languages</h2>
-              <table border="1">
-                <tr>
-                  <th>Language</th>
-                  <th>Level</th>
-                </tr>
-                <tr>
-                  <td>Romanian</td>
-                  <td>Native</td>
-                </tr>
-                <tr>
-                  <td>English</td>
-                  <td>Proficient</td>
-                </tr>
-                <tr>
-                  <td>Hungarian</td>
-                  <td>Native</td>
-                </tr>
-              </table>
-            </div>
-          </section>
-          <footer>
-            <a
-              href="https://ro.linkedin.com/in/robert-popita-a9612220a"
-              target="_blank"
-              >LinkedIn</a
-            >
-          </footer>
+        <div id="languages" class="page">
+          <h2>Known Languages</h2>
+          <table border="1">
+            <tr>
+              <th>Language</th>
+              <th>Level</th>
+            </tr>
+            <tr>
+              <td>Romanian</td>
+              <td>Native</td>
+            </tr>
+            <tr>
+              <td>English</td>
+              <td>Proficient</td>
+            </tr>
+            <tr>
+              <td>Hungarian</td>
+              <td>Native</td>
+            </tr>
+          </table>
+        </div>
 
-        </form>
+        <div id="projects" clas="page">
+          <h2>Projects</h2>
+          <p>...</p>
+        </div>
       </div>
     </section>
+
+    <footer style="text-align: center; font-weight: bold">
+      <a
+        href="https://ro.linkedin.com/in/robert-popita-a9612220a"
+        target="_blank"
+        >LinkedIn</a
+      >
+    </footer>
+
     <script src="index.js"></script>
   </body>
 </html>
