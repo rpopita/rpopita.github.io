@@ -16,6 +16,7 @@ body {
 }
 
 .page {
+  display: none;
   background-color: white;
   margin: 0 0 10px 0;
   padding: 24px;
@@ -47,7 +48,6 @@ a {
   color: #0666ff;
 }
 #job-title {
-  font-style: italic;
   font-weight: lighter;
 }
 .favourite {
