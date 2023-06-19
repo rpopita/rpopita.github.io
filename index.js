@@ -17,5 +17,3 @@ function showProjects() {
   var page = document.getElementById("projects");
   page.style.display = "block";
 }
-
-showHome();
