@@ -10,7 +10,7 @@ function hide(id) {
 function showPage(id) {
   hide(activePage);
   var page = document.getElementById(id);
-  console.info("show", page);
+  console.info("show %o", id, page);
   page.style.display = "block";
   activePage = id;
 }
