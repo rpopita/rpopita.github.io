@@ -93,7 +93,7 @@ a {
 
 #top-menu-bar {
   text-align: center;
-  background: #0777ff;
+  background: #0798ab99;
   color: #fff;
 }
 
@@ -116,6 +116,6 @@ a {
 }
 
 #top-menu-bar a:hover {
-  color: #0777ff;
+  color: #0798ab99;
   background-color: #f00;
 }
