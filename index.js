@@ -17,4 +17,4 @@ function showPage(id) {
 
 // start our code
 
-showPage(activePage);
+// showPage(activePage);
