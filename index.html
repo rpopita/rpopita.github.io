@@ -9,25 +9,23 @@
   </head>
   <body>
     <header>
-      <div class="header-wrapper">
-        <div>
-          <h1>Robert Popita</h1>
-        </div>
+      <div id="header-wrapper">
         <div id="profilePic">
-          <img src="popi.jpeg" alt="" width="150" />
+          <img src="popi.jpeg" alt="" height="150" />
         </div>
-        <h2 id="job title">QA Engineer</h2>
+        <div id="header-info">
+          <h1>Robert Popita</h1>
+          <h2 id="job title">QA Engineer</h2>
+        </div>
       </div>
 
-      <div>
-        <a
-          href="https://ro.linkedin.com/in/robert-popita-a9612220a"
-          target="_blank"
-        >
-          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-          LinkedIn
-        </a>
-      </div>
+      <a
+        href="https://ro.linkedin.com/in/robert-popita-a9612220a"
+        target="_blank"
+      >
+        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        LinkedIn
+      </a>
 
       <ul id="top-menu-bar">
         <li><a href="#" data-page="home">Home</a></li>
@@ -42,8 +40,8 @@
         <section>
           <h2>Contact</h2>
           <form action="" method="get">
-            <label for="email">Enter your email</label>
-            <p>
+            <div>
+              <label for="email">Enter your email</label>
               <input
                 type="email"
                 name="contactEmail"
@@ -51,11 +49,9 @@
                 placeholder="name@email.com"
                 required
               />
-            </p>
-            <p>
+            </div>
+            <div>
               <label for="name">Your name</label>
-            </p>
-            <p>
               <input
                 type="text"
                 name="name"
@@ -63,7 +59,7 @@
                 placeholder="Enter your name"
                 required
               />
-            </p>
+            </div>
             <div>
               <button type="submit">Submit</button>
             </div>
