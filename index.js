@@ -17,7 +17,7 @@ function showPage(id) {
 
 function clickOnMenu(e) {
   var link = e.target.closest("a");
-  console.warn("click", link, e.target);
+  // console.warn("click", link, e.target);
   if (link) {
     var id = link.dataset.page;
     // console.warn("click", e.target.getAttribute("data-page"));
