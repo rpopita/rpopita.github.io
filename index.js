@@ -45,23 +45,34 @@ function clickOnMenu(e) {
 }
 
 function showSkills() {
-  var skills = [
-    { name: "HTML", favourite: true },
-    { name: "css" },
-    { name: "JS", favourite: true },
-  ];
+  var skills = [];
   var htmlSkills = skills.map(function (skill) {
-    // <li class="favourite">HTML</li>
+    // <li class="favorite">HTML</li>
     console.info("skill", skill);
-    var cls = skill.favourite ? "favourite" : "";
+    var cls = skill.favorite ? "favorite" : "";
     return `<li class="${cls}">${skill.name}</li>`;
   });
   var ul = $("#skills ul");
   ul.innerHTML = htmlSkills.join("");
 }
 
+function loadSkills() {
+  var r1 = fetch("skills.json");
+  console.warn("1", r1);
+  var r2 = r1.then(function (r) {
+    console.info("2.ready");
+    return r.json();
+  });
+  r2.then(function (a) {
+    console.warn("a", a);
+  });
+  console.warn("3.r2", r2);
+  // ....
+  showSkills();
+}
+
 // start our code
 
 showPage(activePage);
 $("#top-menu-bar").addEventListener("click", clickOnMenu);
-showSkills();
+loadSkills();
