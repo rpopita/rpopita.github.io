@@ -1,4 +1,4 @@
-var activePage = "home";
+var activePage = "skills";
 
 // utilities functions
 
@@ -11,7 +11,7 @@ function hide(id) {
   $(`#${id}`).style.display = "none";
 }
 
-function shpw(id) {
+function show(id) {
   var page = $("#" + id);
   console.info("show %o", id, page);
   page.style.display = "block";
@@ -23,12 +23,12 @@ function showPage(id) {
 
   hide(activePage);
 
+  activePage = id;
+
   var link = $(`#top-menu-bar a[data-page=${id}]`);
   link.classList.add("active");
 
-  show(id);
-
-  activePage = id;
+  show(activePage);
 }
 
 function clickOnMenu(e) {
@@ -46,5 +46,13 @@ function clickOnMenu(e) {
 
 // start our code
 
-showPage("home");
+showPage(activePage);
 $("#top-menu-bar").addEventListener("click", clickOnMenu);
+
+var skills = ["HTML", "css", "JS"];
+var htmlSkills = skills.map(function (skill) {
+  console.info("inside map", skill);
+  return `<li>${skill}</li>`;
+});
+var ul = $("#skills ul");
+ul.innerHTML = htmlSkills.join("");
