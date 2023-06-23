@@ -44,15 +44,24 @@ function clickOnMenu(e) {
   }
 }
 
+function showSkills() {
+  var skills = [
+    { name: "HTML", favourite: true },
+    { name: "css" },
+    { name: "JS", favourite: true },
+  ];
+  var htmlSkills = skills.map(function (skill) {
+    // <li class="favourite">HTML</li>
+    console.info("skill", skill);
+    var cls = skill.favourite ? "favourite" : "";
+    return `<li class="${cls}">${skill.name}</li>`;
+  });
+  var ul = $("#skills ul");
+  ul.innerHTML = htmlSkills.join("");
+}
+
 // start our code
 
 showPage(activePage);
 $("#top-menu-bar").addEventListener("click", clickOnMenu);
-
-var skills = ["HTML", "css", "JS"];
-var htmlSkills = skills.map(function (skill) {
-  console.info("inside map", skill);
-  return `<li>${skill}</li>`;
-});
-var ul = $("#skills ul");
-ul.innerHTML = htmlSkills.join("");
+showSkills();
