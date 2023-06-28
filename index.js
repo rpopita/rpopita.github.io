@@ -54,23 +54,23 @@ function sortByName(a, b) {
 
 function showSkills(skills) {
   skills.sort(sortByEndorsements);
-  var htmlSkills = skills.map(function (skill) {
-    var cls = skill.favorite ? "favorite" : "";
+  const htmlSkills = skills.map((skill) => {
+    const cls = skill.favorite ? "favorite" : "";
     return `<li class="${cls}">
     ${skill.name} 
     <span> ${skill.endorsements}</span>
     </li>`;
   });
-  var ul = $("#skills ul");
+  const ul = $("#skills ul");
   ul.innerHTML = htmlSkills.join("");
 }
 
 function loadSkills() {
-  var response = fetch("skills.json");
-  var loaded = response.then(function (r) {
+  const response = fetch("skills.json");
+  const loaded = response.then((r) => {
     return r.json();
   });
-  loaded.then(function (skills) {
+  loaded.then((skills) => {
     showSkills(skills);
   });
 }
