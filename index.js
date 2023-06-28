@@ -1,4 +1,4 @@
-var activePage = "skills";
+let activePage = "skills";
 
 // utilities functions
 
@@ -12,30 +12,30 @@ function hide(id) {
 }
 
 function show(id) {
-  var page = $("#" + id);
+  const page = $("#" + id);
   console.info("show %o", id, page);
   page.style.display = "block";
 }
 
 function showPage(id) {
-  var oldlink = $(`#top-menu-bar a[data-page=${activePage}]`);
+  const oldlink = $(`#top-menu-bar a[data-page=${activePage}]`);
   oldlink.classList.remove("active");
 
   hide(activePage);
 
   activePage = id;
 
-  var link = $(`#top-menu-bar a[data-page=${id}]`);
+  const link = $(`#top-menu-bar a[data-page=${id}]`);
   link.classList.add("active");
 
   show(activePage);
 }
 
 function clickOnMenu(e) {
-  var link = e.target.closest("a");
+  const link = e.target.closest("a");
   // console.warn("click", link, e.target);
   if (link) {
-    var id = link.dataset.page;
+    const id = link.dataset.page;
     // console.warn("click", e.target.getAttribute("data-page"));
     // console.warn("click %o menu", id);
     if (id) {
@@ -44,31 +44,35 @@ function clickOnMenu(e) {
   }
 }
 
-function showSkills() {
-  var skills = [];
+function sortByEndorsements(a, b) {
+  return b.endorsements - a.endorsements;
+}
+
+function sortByName(a, b) {
+  return a.name.localCompare(b.name);
+}
+
+function showSkills(skills) {
+  skills.sort(sortByEndorsements);
   var htmlSkills = skills.map(function (skill) {
-    // <li class="favorite">HTML</li>
-    console.info("skill", skill);
     var cls = skill.favorite ? "favorite" : "";
-    return `<li class="${cls}">${skill.name}</li>`;
+    return `<li class="${cls}">
+    ${skill.name} 
+    <span> ${skill.endorsements}</span>
+    </li>`;
   });
   var ul = $("#skills ul");
   ul.innerHTML = htmlSkills.join("");
 }
 
 function loadSkills() {
-  var r1 = fetch("skills.json");
-  console.warn("1", r1);
-  var r2 = r1.then(function (r) {
-    console.info("2.ready");
+  var response = fetch("skills.json");
+  var loaded = response.then(function (r) {
     return r.json();
   });
-  r2.then(function (a) {
-    console.warn("a", a);
+  loaded.then(function (skills) {
+    showSkills(skills);
   });
-  console.warn("3.r2", r2);
-  // ....
-  showSkills();
 }
 
 // start our code
