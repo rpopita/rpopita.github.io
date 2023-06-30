@@ -114,6 +114,7 @@ a {
 }
 
 #top-menu-bar a {
+  cursor: pointer;
   text-decoration: none;
   padding: 5px 15px 5px 15px;
   color: #fff;
